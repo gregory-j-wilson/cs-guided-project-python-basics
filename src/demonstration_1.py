@@ -17,9 +17,19 @@ The assumptions we are making about our input are the following:
 - The string has no spaces.
 - The specified size is always a positive integer.
 """
-def split_in_parts(s, part_length):
-    # Your code here
 
 
+# def split_in_parts(s, part_length):
 # Your code here
 
+words = "Hellothisisawesome"
+
+
+def chunks(lst, n):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        print(lst[i:i + n])
+
+
+_letters = chunks(words, 3)
+print(_letters)
