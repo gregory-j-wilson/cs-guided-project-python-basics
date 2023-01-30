@@ -19,17 +19,14 @@ The assumptions we are making about our input are the following:
 """
 
 
-# def split_in_parts(s, part_length):
+def split_in_parts(s, part_length):
+    """Yeild successive n-sized chunks from s"""
+    for i in range(0, len(s), part_length):
+        print(s[i:i+part_length])
+
 # Your code here
+
 
 words = "Hellothisisawesome"
 
-
-def chunks(lst, n):
-    """Yield successive n-sized chunks from lst."""
-    for i in range(0, len(lst), n):
-        print(lst[i:i + n])
-
-
-_letters = chunks(words, 3)
-print(_letters)
+print(split_in_parts(words, 4))
