@@ -17,9 +17,16 @@ The assumptions we are making about our input are the following:
 - The string has no spaces.
 - The specified size is always a positive integer.
 """
-def split_in_parts(s, part_length):
-    # Your code here
 
+
+def split_in_parts(s, part_length):
+    """Yeild successive n-sized chunks from s"""
+    for i in range(0, len(s), part_length):
+        print(s[i:i+part_length])
 
 # Your code here
 
+
+words = "Hellothisisawesome"
+
+print(split_in_parts(words, 4))
